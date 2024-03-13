@@ -15,7 +15,7 @@ def apply_watermark():
         watermark = Image.new('RGBA', (width, height), (255, 255, 255, 0))
         draw = ImageDraw.Draw(watermark)
         font = ImageFont.load_default()
-        draw.text((10, 10), "Watermark", fill=(255, 255, 255, 128), font=font)
+        draw.text((10, 10), "Erchey", fill=(255, 255, 255, 128), font=font)
 
         # Composite the original image with the watermark
         watermarked_image = Image.alpha_composite(original_image.convert('RGBA'), watermark)
@@ -26,6 +26,7 @@ def apply_watermark():
 # Create the main window
 root = Tk()
 root.title("Watermarking App")
+
 
 # Select Image Button
 select_button = Button(root, text="Select Image", command=select_image)
