@@ -14,7 +14,8 @@ def apply_watermark():
         # Create a transparent image for the watermark
         watermark = Image.new('RGBA', (width, height), (255, 255, 255, 0))
         draw = ImageDraw.Draw(watermark)
-        font = ImageFont.load_default()
+        font = ImageFont.truetype("arial.ttf", 40)
+
         draw.text((10, 10), "Erchey", fill=(255, 255, 255, 128), font=font)
 
         # Composite the original image with the watermark
